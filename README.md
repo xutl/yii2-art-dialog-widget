@@ -9,7 +9,6 @@ Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
 [![Latest Stable Version](https://poser.pugx.org/xutl/yii2-art-dialog-widget/v/stable.png)](https://packagist.org/packages/xutl/yii2-art-dialog-widget)
 [![Total Downloads](https://poser.pugx.org/xutl/yii2-art-dialog-widget/downloads.png)](https://packagist.org/packages/xutl/yii2-art-dialog-widget)
-[![Build Status](https://travis-ci.org/xutl/yii2-art-dialog-widget.svg?branch=master)](https://travis-ci.org/xutl/yii2-art-dialog-widget)
 
 安装
 ------------
@@ -33,5 +32,5 @@ to the `require` section of your `composer.json`.
 
 ### Thanks to
 
-* [Yii framework](https://github.com/yiisoft/framework)
+* [Yii framework](https://github.com/yiisoft/yii2)
 * [artDialog](https://github.com/aui/artDialog)
