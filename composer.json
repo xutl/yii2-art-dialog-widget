@@ -1,5 +1,5 @@
 {
-    "name": "xutl/yii2-artdialog-widget",
+    "name": "xutl/yii2-art-dialog-widget",
     "description": "Adding art-dialog to your yii2 project via Composer",
     "type": "yii2-widget",
     "keywords": ["yii2","widget","artDialog","yii2-artdialog"],
