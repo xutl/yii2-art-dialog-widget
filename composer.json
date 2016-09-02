@@ -1,0 +1,29 @@
+{
+    "name": "xutl/yii2-artdialog-widget",
+    "description": "Adding art-dialog to your yii2 project via Composer",
+    "type": "yii2-widget",
+    "keywords": ["yii2","widget","artDialog","yii2-artdialog"],
+    "license": "BSD-4-Clause",
+    "authors": [
+        {
+            "name": "xutongle",
+            "email": "xutongle@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.5",
+        "bower-asset/art-dialog": ">=6.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "xutl\\artdialog\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
