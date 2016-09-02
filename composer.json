@@ -6,24 +6,17 @@
     "license": "BSD-4-Clause",
     "authors": [
         {
-            "name": "xutongle",
-            "email": "xutongle@gmail.com"
+            "name": "xutl",
+            "email": "xutl@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.5",
-        "bower-asset/art-dialog": ">=6.0.4"
+        "yiisoft/yii2": ">=2.0.9"
     },
     "autoload": {
         "psr-4": {
-            "xutl\\artdialog\\": ""
-        }
-    },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+            "xutl\\dialog\\": ""
         }
     }
 }
