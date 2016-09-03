@@ -51,7 +51,7 @@ class Dialog extends Widget
 
     /**
      * {@inheritDoc}
-     * @see \Leaps\Base\Object::init()
+     * @see \yii\base\Object::init()
      */
     public function init()
     {
@@ -59,10 +59,13 @@ class Dialog extends Widget
         if (!isset ($this->options ['id'])) {
             $this->options ['id'] = $this->getId();
         }
-        $this->clientOptions = array_merge(['okValue' => 'Ok', 'cancelValue' => 'Cancel'
-    ], $this->clientOptions);
+        $this->clientOptions = array_merge(
+            [
+                'okValue' => Yii::t('app', 'Ok'),
+                'cancelValue' => Yii::t('app', 'Cancel')
+            ], $this->clientOptions);
         if ($this->toggleButton !== false) {
-            if (!isset ($this->toggleButton ['data-target'])){
+            if (!isset ($this->toggleButton ['data-target'])) {
                 $this->toggleButton ['data-target'] = 'dialog_' . $this->options ['id'];
             }
         }
@@ -70,16 +73,14 @@ class Dialog extends Widget
 
     /**
      * {@inheritDoc}
-     * @see \Leaps\Base\Widget::run()
+     * @see \yii\base\Widget::run()
      */
     public function run()
     {
         $view = $this->getView();
         DialogAsset::register($view);
-        $options = empty ($this->clientOptions) ? '' : Json::htmlEncode($this->clientOptions);
-        $options = str_replace(['"function', '}"'], ['function', '}'], $options);
-        $js = "jQuery(document).on('click','[data-target^=dialog_{$this->options ['id']}]',function(e){dialog($options).show();});";
-        $view->registerJs($js);
+        $options = Json::encode($this->clientOptions);
+        $view->registerJs("jQuery(document).on('click','[data-target^=dialog_{$this->options ['id']}]',function(e){dialog($options).show();});");
         echo $this->renderToggleButton() . "\n";
     }
 
