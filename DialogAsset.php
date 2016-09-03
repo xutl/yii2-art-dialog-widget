@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
 class DialogAsset extends AssetBundle
 {
 
-    public $sourcePath = '@xutl/dialog/assets';
+    public $sourcePath = '@vendor/xutl/yii2-art-dialog-widget/assets';
 
     public $css = [
         'css/ui-dialog.css'
